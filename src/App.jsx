@@ -14,14 +14,8 @@ export default function FitSnapApp() {
   const target = { calories: 2200, protein: 160, carbs: 220, fat: 60 };
 
   const totals = dailyLog.reduce(
-    (acc, item) => ({
-      calories: acc.calories + item.calories,
-      protein: acc.protein + item.protein,
-      carbs: acc.carbs + item.carbs,
-      fat: acc.fat + item.fat,
-    }),
-    { calories: 0, protein: 0, carbs: 0, fat: 0 }
-  );
+    (acc, item) =const [dailyLog, setDailyLog] = useState([]);
+
 
   const handleAIScan = () => {
     if (!isPremium) {
